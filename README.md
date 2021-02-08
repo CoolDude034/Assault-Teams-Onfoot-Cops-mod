@@ -7,3 +7,7 @@ Adds assault teams/onfoot cops that spawn during wanted levels, essentially maki
 each enemy carry different arsenals, from snipers to carbines.
 
 Spawned Units will be removed by the game itself, so you wont get any piles of dead corpses everywhere.
+
+
+Installation:
+Drop WantedLevel.cs into Grand Theft Auto V > scripts folder, if you do not have "scripts" folder, install Scripthook and either run the game once or create the folder manually.
