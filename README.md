@@ -11,3 +11,4 @@ Spawned Units will be removed by the game itself, so you wont get any piles of d
 
 Installation:
 Drop WantedLevel.cs into Grand Theft Auto V > scripts folder, if you do not have "scripts" folder, install Scripthook and either run the game once or create the folder manually.
+It also comes with script that disables DT_PoliceAutomobile and DT_SwatAutomobile when player is onfoot and enables it when in a vehicle pursuit, drop the contents of DisableDispatch folder in your scripts folder.
