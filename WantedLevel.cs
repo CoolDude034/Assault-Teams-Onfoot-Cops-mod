@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +27,6 @@ namespace CustomWantedLevel
 
             if (Game.Player.Character.IsOnFoot == true)
             {
-                SetDispatchCopsForPlayer(false);
                 if (Game.Player.WantedLevel == 1 || Game.Player.WantedLevel == 2)
                 {
                     //CreatePoliceVehicle(); // spawn first responders, disabled as it spawns a shit ton of cop cars with the current interval 2.5 seconds
@@ -58,16 +57,7 @@ namespace CustomWantedLevel
                             break;
                     }
                 }   
-            }
-            else if (Game.Player.Character.IsOnFoot != true)
-            {
-                SetDispatchCopsForPlayer(true);
-            }
-
-            if (Game.Player.WantedLevel <= 0)
-            {
-                SetDispatchCopsForPlayer(true);
-            }    
+            }   
         }
         // Below here can be customized, from model to weapon. If you know what you're doing, you can add new functions and add them to the spawn group.
         void CreatePoliceVehicle()
@@ -276,11 +266,6 @@ namespace CustomWantedLevel
             cop2.MarkAsNoLongerNeeded();
             cop3.MarkAsNoLongerNeeded();
             cop4.MarkAsNoLongerNeeded();
-        }
-        // This function makes it easier to enable/disable cop dispatches
-        void SetDispatchCopsForPlayer(bool toggle)
-        {
-            Function.Call(Hash.SET_DISPATCH_COPS_FOR_PLAYER, Game.Player, toggle);
         }
     }
 }
